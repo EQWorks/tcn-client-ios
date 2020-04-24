@@ -55,7 +55,7 @@ struct SecKeyEllipticCurveKeyPair: PublicPrivateKeyPair {
 
     // TODO: TMP impl
     private let curvePrivateKey = UUID().asData()
-    private let curvePublicKey = UUID().asData()
+    private let curvePublicKey = UUID().asData() + UUID().asData()
 
     var privateKey: Data { return curvePrivateKey }
     var publicKey: Data { return curvePublicKey }
