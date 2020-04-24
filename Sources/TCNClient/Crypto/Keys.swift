@@ -116,7 +116,7 @@ public struct ReportAuthorizationKey: Equatable {
     }
     
     /// This is internal because tck_0 shouldn't be used to generate a TCN.
-    var tck_0: TemporaryContactKey {
+    public var tck_0: TemporaryContactKey {
         return TemporaryContactKey(
             index: 0,
             reportVerificationPublicKeyBytes: keyPair.publicKey,
