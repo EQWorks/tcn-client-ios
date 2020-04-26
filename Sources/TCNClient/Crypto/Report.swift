@@ -143,6 +143,6 @@ public struct SignedReport: Equatable {
     
     /// Verify the source integrity of the contained `report`.
     public func verify() throws -> Bool {
-        return try CryptoProvider.isValidSignature(key: report.reportVerificationPublicKeyBytes, signatureBytes, for: try report.serializedData())
+        return try CryptoLib.isValidSignature(key: report.reportVerificationPublicKeyBytes, signatureBytes, for: try report.serializedData())
     }
 }
